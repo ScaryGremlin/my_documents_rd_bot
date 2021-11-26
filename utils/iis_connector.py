@@ -1,4 +1,5 @@
 from collections import namedtuple
+from typing import Optional
 
 import aiohttp
 
@@ -10,15 +11,7 @@ class IisConnector:
     """
     Класс взаимодействия с ИИС
     """
-    __days_of_week = {
-        "Понедельник": "Пн",
-        "Вторник": "Вт",
-        "Среда": "Ср",
-        "Четверг": "Чт",
-        "Пятница": "Пт",
-        "Суббота": "Сб",
-        "Воскресенье": "Вс",
-    }
+
     Response = namedtuple("Response", ["status", "data"])
 
     def __init__(self):
